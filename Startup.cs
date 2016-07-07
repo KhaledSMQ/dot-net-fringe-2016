@@ -9,11 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AspNet.Security.OAuth.GitHub;
 using dot_net_core.Data;
 using dot_net_core.Models;
 using dot_net_core.Services;
-
-using Microsoft.AspNetCore.Authentication.Google;
 
 namespace dot_net_core
 {
@@ -81,6 +80,12 @@ namespace dot_net_core
             app.UseGoogleAuthentication(new GoogleOptions{
                 ClientId = Configuration["Authentication:Google:ClientID"],
                 ClientSecret = Configuration["Authentication:Google:ClientSecret"]
+            });
+
+            app.UseGitHubAuthentication(new GitHubAuthenticationOptions{
+                ClientId = Configuration["Authentication:GitHub:ClientID"],
+                ClientSecret = Configuration["Authentication:GitHub:ClientSecret"],
+                Scope = { "user:email" }
             });
 
             app.UseMvc(routes =>
