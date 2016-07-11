@@ -11,6 +11,7 @@
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Authentication.Google": "1.0.0",
+    "Microsoft.AspNetCore.Authentication.Facebook": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.0",
     "Microsoft.AspNetCore.Razor.Tools": {
       "version": "1.0.0-preview2-final",
@@ -45,7 +46,8 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "AspNet.Security.OAuth.Github": "1.0.0-beta1-final"
+    "AspNet.Security.OAuth.Github": "1.0.0-beta1-final",
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect": "1.0.0"
   },
 
   "tools": {
